@@ -1,6 +1,6 @@
 // iterators4.rs
 
-// I AM NOT DONE
+// I AM DONE
 
 pub fn factorial(num: u64) -> u64 {
     // Complete this function to return the factorial of num
@@ -12,6 +12,8 @@ pub fn factorial(num: u64) -> u64 {
     // For an extra challenge, don't use:
     // - recursion
     // Execute `rustlings hint iterators4` for hints.
+    let all_numbers: Vec<u64> = (1..=num).collect();
+    all_numbers.iter().fold(1, |acc, &x| acc * x)
 }
 
 #[cfg(test)]
